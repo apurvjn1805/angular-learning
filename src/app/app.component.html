@@ -1,0 +1,12 @@
+<app-header (featureSelected)="featureToDisplay($event)"></app-header>
+
+
+<div class="container">
+
+  <div class="row">
+      <div class="col-md-12">
+        <app-recipe *ngIf="selectedFeature==='recipe'"></app-recipe>
+        <app-shopping-list *ngIf="selectedFeature!=='recipe'"></app-shopping-list>
+      </div>
+  </div>
+</div>
